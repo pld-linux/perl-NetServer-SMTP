@@ -6,6 +6,7 @@ Version:	0.01
 Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/NetServer/NetServer-SMTP-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
@@ -33,12 +34,11 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
-
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 gzip -9nf Changes README
 
@@ -47,11 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {Changes,README}.gz
-
+%doc *.gz
 %{perl_sitelib}/NetServer/SMTP.pm
 %{perl_sitearch}/auto/NetServer/SMTP
-
 %{_mandir}/man3/*
-
-%{_prefix}/src/examples/%{name}-%{version}
+%{_examplesdir}/%{name}-%{version}
