@@ -30,7 +30,7 @@ NetServer::SMTP - podstawowa klasa serwera SMTP.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
