@@ -5,7 +5,7 @@ Summary:	NetServer::SMTP perl module
 Summary(pl):	Modu³ perla NetServer::SMTP
 Name:		perl-NetServer-SMTP
 Version:	0.01
-Release:	10
+Release:	11
 # same as perl (but sending unsolicited commercial mail require a fee)
 License:	GPL v1+ or Artistic (with one restriction, see LICENSE)
 Group:		Development/Languages/Perl
