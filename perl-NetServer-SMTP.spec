@@ -6,7 +6,8 @@ Summary(pl):	Modu³ perla NetServer::SMTP
 Name:		perl-NetServer-SMTP
 Version:	0.01
 Release:	10
-License:	GPL
+# same as perl (but sending unsolicited commercial mail require a fee)
+License:	GPL v1+ or Artistic (with one restriction, see LICENSE)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	46f345dfc3e7022c3c0f8bdc94a9a700
@@ -37,7 +38,8 @@ NetServer::SMTP - podstawowa klasa serwera SMTP.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
@@ -46,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes README LICENSE
 %{perl_vendorlib}/NetServer/SMTP.pm
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
