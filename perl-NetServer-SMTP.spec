@@ -3,7 +3,7 @@ Summary:	NetServer-SMTP perl module
 Summary(pl):	Modu³ perla NetServer-SMTP
 Name:		perl-NetServer-SMTP
 Version:	0.01
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -47,6 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %{perl_sitelib}/NetServer/SMTP.pm
-%{perl_sitearch}/auto/NetServer/SMTP
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
