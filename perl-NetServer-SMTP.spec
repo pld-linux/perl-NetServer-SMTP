@@ -1,4 +1,4 @@
-%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+%include	/usr/lib/rpm/macros.perl
 Summary:	NetServer-SMTP perl module
 Summary(pl):	Modu³ perla NetServer-SMTP
 Name:		perl-NetServer-SMTP
@@ -8,7 +8,12 @@ Copyright:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/NetServer/NetServer-SMTP-%{version}.tar.gz
-BuildRequires:	perl >= 5.005_03-10
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl-libnet
+BuildRequires:	perl-FreezeThaw
+BuildRequires:	perl-File-Flock
+BuildRequires:	perl-Time-modules
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
