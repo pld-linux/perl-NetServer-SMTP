@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	NetServer
 %define	pnam	SMTP
-%include	/usr/lib/rpm/macros.perl
 Summary:	NetServer-SMTP perl module
 Summary(pl):	Modu³ perla NetServer-SMTP
 Name:		perl-NetServer-SMTP
 Version:	0.01
-Release:	8
-
+Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -26,7 +25,7 @@ NetServer-SMTP - basic SMTP server class for Perl.
 NetServer-SMTP - podstawowa klasa serwera SMTP.
 
 %prep
-%setup -q -n NetServer-SMTP-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
