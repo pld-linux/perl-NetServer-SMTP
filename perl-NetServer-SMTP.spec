@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	NetServer
-%define	pnam	SMTP
+%define		pdir	NetServer
+%define		pnam	SMTP
 Summary:	NetServer::SMTP perl module
 Summary(pl):	Modu³ perla NetServer::SMTP
 Name:		perl-NetServer-SMTP
