@@ -15,8 +15,6 @@ BuildRequires:	perl-libnet
 BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-File-Flock
 BuildRequires:	perl-Time-modules
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
