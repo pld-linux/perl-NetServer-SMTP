@@ -2,7 +2,7 @@
 %define		pdir	NetServer
 %define		pnam	SMTP
 Summary:	NetServer::SMTP perl module
-Summary(pl):	Modu≥ perla NetServer::SMTP
+Summary(pl.UTF-8):   Modu≈Ç perla NetServer::SMTP
 Name:		perl-NetServer-SMTP
 Version:	0.01
 Release:	11
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 NetServer::SMTP - basic SMTP server class for Perl.
 
-%description -l pl
+%description -l pl.UTF-8
 NetServer::SMTP - podstawowa klasa serwera SMTP.
 
 %prep
