@@ -2,7 +2,7 @@
 %define		pdir	NetServer
 %define		pnam	SMTP
 Summary:	NetServer::SMTP perl module
-Summary(pl.UTF-8):   Moduł perla NetServer::SMTP
+Summary(pl.UTF-8):	Moduł perla NetServer::SMTP
 Name:		perl-NetServer-SMTP
 Version:	0.01
 Release:	11
