@@ -1,6 +1,6 @@
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	NetServer
 %define		pnam	SMTP
+%include	/usr/lib/rpm/macros.perl
 Summary:	NetServer::SMTP perl module
 Summary(pl.UTF-8):	Moduł perla NetServer::SMTP
 Name:		perl-NetServer-SMTP
@@ -11,12 +11,13 @@ License:	GPL v1+ or Artistic (with one restriction, see LICENSE)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	46f345dfc3e7022c3c0f8bdc94a9a700
-BuildRequires:	rpm-perlprov >= 4.1-13
+URL:		http://search.cpan.org/dist/NetServer-SMTP/
+BuildRequires:	perl-File-Flock
+BuildRequires:	perl-FreezeThaw
+BuildRequires:	perl-Time-modules
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-libnet
-BuildRequires:	perl-FreezeThaw
-BuildRequires:	perl-File-Flock
-BuildRequires:	perl-Time-modules
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,7 +42,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
